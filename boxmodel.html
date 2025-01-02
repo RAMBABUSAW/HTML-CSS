@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX MODEL</title>
+    <style>
+        .box-model-demo {
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            border: 5px solid #333;
+            margin:30px;
+            background-color:#ffffff;
+        }
+        .content-box {
+            box-sizing: content-box;
+            background-color: #aaaa;
+        }
+
+        .border-box {
+            box-sizing:border-box;
+            background-color: #ccffcc;
+        }
+        .box-model-demo p {
+            margin: 0;
+        }
+        .highlight {
+            background-color: #c5d81e;
+            display: inline-block;
+        }
+        .inline-example {
+            background-color: #2faa4e;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            height: 100px;
+        }
+        .block-example {
+            background-color: #c5d81e;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS box Model Example</h1>
+
+    <h2>Content-box (Default)</h2>
+    <div class="box-model-demo content-box">
+        <p>This is a content box element .</p>
+        <p>width: 300px + 40px (padding) + 10px (border) = 350px</p>
+        <p>Height: 200px + 40px (padding) 10px (border) = 250px</p>
+    </div>
+    
+    <h2>Border-Box</h2>
+    <div class="box-model-demo content-box">
+        <p>This is a content box element .</p>
+        <p>width: 300px (including padding and border)</p>
+        <p>Height: 200px (including padding and border)</p>
+    </div>
+
+    <h2>inline vs Block Elements</h2>
+    <p>This is a paragraph width an
+        <span class="inline-example">inline element</span> inside. Inline Elements
+        only takke up as such width as necessary and allow other elements next to them.
+
+    </p>
+    <div class="block-example">
+        This is a block-level element. it takes up the full width available and
+        creat a new line before and after it.
+    </div>
+</body>
+</html>
